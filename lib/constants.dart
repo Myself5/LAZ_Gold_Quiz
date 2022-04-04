@@ -12,3 +12,15 @@ const kPrimaryGradient = LinearGradient(
 );
 
 const double kDefaultPadding = 20.0;
+
+const String qTrue = "true";
+const String qFalse = "false";
+
+const List<String> kQuestionTypes = [
+  "Mannschaft",
+  "Maschinist",
+  "Gruppenführer"
+];
+
+// Default numbers of questions in a quiz
+const String kDefaultQuizAmount = "30";

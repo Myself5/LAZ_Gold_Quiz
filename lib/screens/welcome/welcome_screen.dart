@@ -1,35 +1,99 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:get/get.dart';
-import 'package:quiz_app/constants.dart';
-import 'package:quiz_app/screens/quiz/quiz_screen.dart';
+import 'package:flutter/services.dart';
 
-class WelcomeScreen extends StatelessWidget {
+import 'package:get/get.dart';
+
+import 'package:laz_gold/constants.dart';
+import 'package:laz_gold/controllers/question_controller.dart';
+
+class WelcomeScreen extends StatefulWidget {
+  const WelcomeScreen({Key? key}) : super(key: key);
+
+  @override
+  State<WelcomeScreen> createState() => _WelcomeScreenState();
+}
+
+class _WelcomeScreenState extends State<WelcomeScreen> {
+  QuestionController _controller = Get.put(QuestionController());
+  String? _selectedQuestionType = kQuestionTypes[0];
   @override
   Widget build(BuildContext context) {
+    _controller.loadQuestions(kQuestionTypes.indexOf(_selectedQuestionType!));
     return Scaffold(
       body: Stack(
         children: [
-          SvgPicture.asset("assets/icons/bg.svg", fit: BoxFit.fill),
           SafeArea(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: kDefaultPadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Spacer(flex: 2), //2/6
+                  Spacer(), //2/6
                   Text(
-                    "Let's Play Quiz,",
-                    style: Theme.of(context).textTheme.headline4.copyWith(
+                    "Freiwillige Feuerwehr Eppingen",
+                    style: Theme.of(context).textTheme.headline6?.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  Text("Enter your informations below"),
+                  Text(
+                    "Fragebogen zum Leistungsabzeichen Gold",
+                    style: Theme.of(context).textTheme.headline4?.copyWith(
+                        color: Colors.white, fontWeight: FontWeight.bold),
+                  ),
+                  Spacer(flex: 3),
+                  Text(
+                    "Fragengruppe:",
+                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                        color: Colors.white, fontWeight: FontWeight.normal),
+                  ),
+                  SizedBox(height: kDefaultPadding / 2),
+                  FormField<String>(
+                    builder: (FormFieldState<String> state) {
+                      return InputDecorator(
+                        decoration: InputDecoration(
+                          filled: true,
+                          fillColor: Color(0xFF1C2341),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(12)),
+                          ),
+                        ),
+                        isEmpty: _selectedQuestionType == '',
+                        child: DropdownButtonHideUnderline(
+                          child: DropdownButton<String>(
+                            value: _selectedQuestionType,
+                            isDense: true,
+                            onChanged: (String? newValue) {
+                              setState(() {
+                                _selectedQuestionType = newValue;
+                                state.didChange(newValue);
+                              });
+                            },
+                            items: kQuestionTypes.map((String value) {
+                              return DropdownMenuItem<String>(
+                                value: value,
+                                child: Text(value),
+                              );
+                            }).toList(),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
                   Spacer(), // 1/6
+                  Text(
+                    "Anzahl der Fragen (max. ${_controller.questions.length}):",
+                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                        color: Colors.white, fontWeight: FontWeight.normal),
+                  ),
+                  SizedBox(height: kDefaultPadding / 2),
                   TextField(
+                    controller: _controller.numQuestionController,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+                    enableInteractiveSelection: false,
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Color(0xFF1C2341),
-                      hintText: "Full Name",
+                      hintText: "Anzahl der Fragen",
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
@@ -37,7 +101,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   Spacer(), // 1/6
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => _controller.startQuestions(),
                     child: Container(
                       width: double.infinity,
                       alignment: Alignment.center,
@@ -47,11 +111,11 @@ class WelcomeScreen extends StatelessWidget {
                         borderRadius: BorderRadius.all(Radius.circular(12)),
                       ),
                       child: Text(
-                        "Lets Start Quiz",
+                        "Quiz starten",
                         style: Theme.of(context)
                             .textTheme
                             .button
-                            .copyWith(color: Colors.black),
+                            ?.copyWith(color: Colors.black),
                       ),
                     ),
                   ),

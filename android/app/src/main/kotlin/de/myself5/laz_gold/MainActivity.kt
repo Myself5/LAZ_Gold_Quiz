@@ -1,4 +1,4 @@
-package com.example.quiz_app
+package de.myself5.laz_gold
 
 import io.flutter.embedding.android.FlutterActivity
 
