@@ -625,8 +625,8 @@ List squadQuestions = [
     "question":
         'Bei welcher Rolle wird der für die Bewegung erforderliche Kraftaufwand um die Hälfte vermindert?',
     "options": [
-      ['Feste Rolle', qTrue],
-      ['Lose Rolle', qFalse],
+      ['Feste Rolle', qFalse],
+      ['Lose Rolle', qTrue],
       ['Mehrere Rollen', qFalse]
     ],
   },
@@ -1207,7 +1207,7 @@ List machinistQuestions = [
   },
   {
     "question":
-        'Wie groß soll der Elektrodenabstand bei der Zündkerze im Motor der Tragkraftspritze mit VWIndustriemotor sein und in welcher Stellung hat der Kraftstoffhahn nach beendetem Einsatz zu stehen?',
+        'Wie groß soll der Elektrodenabstand bei der Zündkerze im Motor der Tragkraftspritze mit VW-Industriemotor sein und in welcher Stellung hat der Kraftstoffhahn nach beendetem Einsatz zu stehen?',
     "options": [
       ['0,6 bis 0,7 mm', qFalse],
       ['0,4 mm', qTrue],
