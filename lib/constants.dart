@@ -19,7 +19,8 @@ const String qFalse = "false";
 const List<String> kQuestionTypes = [
   "Mannschaft",
   "Maschinist",
-  "Gruppenführer"
+  "Gruppenführer",
+  "Geschicklichkeitsfahren für Maschinisten"
 ];
 
 // Default numbers of questions in a quiz
