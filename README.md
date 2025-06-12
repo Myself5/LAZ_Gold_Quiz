@@ -11,6 +11,7 @@ Our quiz app contains a total of three-screen, the welcome screen where a user s
 **Guidelines and Questions used:**
 - Richtlinie Leistungsabzeichen Gold (Revision: 08.03.2021): [link](https://www.lfs-bw.de/fileadmin/LFS-BW/themen/wettbewerb/dokumente/Richtlinie_Leistungsabzeichen_Gold_2017.pdf)
 - Übungsfragen Leistungsabzeichen Gold (Revision: 29.05.2018): [link](https://www.lfs-bw.de/fileadmin/LFS-BW/themen/wettbewerb/dokumente/UEbungsfragen_Leistungsabzeichen_Gold_2017.pdf)
+- Übungsfragen Geschicklichkeitsfahren für Maschinisten (Revision: 25.06.2019): [link](https://www.lfs-bw.de/fileadmin/LFS-BW/themen/wettbewerb/dokumente/Uebungsfragen_Geschicklichkeitsfahren_2019_Loesungen.pdf)
 
 This is a complete functional quiz app that works on both Android and iOS devices. For state management, we use the getX package.
 
