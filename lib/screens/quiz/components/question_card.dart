@@ -41,7 +41,7 @@ class QuestionCard extends StatelessWidget {
             question.question,
             style: Theme.of(context)
                 .textTheme
-                .headline6
+                .titleLarge
                 ?.copyWith(color: kBlackColor),
           ),
           question.image != null
@@ -50,7 +50,7 @@ class QuestionCard extends StatelessWidget {
           Expanded(
             child: Scrollbar(
               controller: _scrollController,
-              isAlwaysShown: true,
+              thumbVisibility: true,
               child: Container(
                 constraints: BoxConstraints.expand(),
                 child: SingleChildScrollView(

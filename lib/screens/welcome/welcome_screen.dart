@@ -31,18 +31,18 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   Spacer(), //2/6
                   Text(
                     "Freiwillige Feuerwehr Eppingen",
-                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   Text(
                     "Fragebogen zum Leistungsabzeichen Gold",
-                    style: Theme.of(context).textTheme.headline4?.copyWith(
+                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                   Spacer(flex: 3),
                   Text(
                     "Fragengruppe:",
-                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         color: Colors.white, fontWeight: FontWeight.normal),
                   ),
                   SizedBox(height: kDefaultPadding / 2),
@@ -81,7 +81,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   Spacer(), // 1/6
                   Text(
                     "Anzahl der Fragen (max. ${_controller.questions.length}):",
-                    style: Theme.of(context).textTheme.headline6?.copyWith(
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
                         color: Colors.white, fontWeight: FontWeight.normal),
                   ),
                   SizedBox(height: kDefaultPadding / 2),
@@ -114,7 +114,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                         "Quiz starten",
                         style: Theme.of(context)
                             .textTheme
-                            .button
+                            .labelLarge
                             ?.copyWith(color: Colors.black),
                       ),
                     ),
