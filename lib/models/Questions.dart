@@ -12,7 +12,7 @@ List<List> questionCatalogue = [
   squadQuestions,
   machinistQuestions,
   groupLeaderQuestions,
-  SkillDrivingQuestions
+  skillDrivingQuestions
 ];
 
 List squadQuestions = [
@@ -2754,7 +2754,7 @@ List groupLeaderQuestions = [
 // Fragenkatalog Geschicklichkeitsfahren fuer Maschinisten
 // https://www.lfs-bw.de/fileadmin/LFS-BW/themen/wettbewerb/dokumente/Uebungsfragen_Geschicklichkeitsfahren_2019_Loesungen.pdf
 
-List SkillDrivingQuestions = [
+List skillDrivingQuestions = [
   {
     "question":
         'Welche Einschaltmöglichkeiten für die Feuerlöschkreiselpumpen kann es an Löschfahrzeugen geben?',
@@ -3011,7 +3011,7 @@ List SkillDrivingQuestions = [
     "question":
         'Wann wird die automatisch gesteuerte Entlüftungseinrichtung einer Kreiselpumpe ausgeschaltet?',
     "options": [
-      ['Ab einen Eingangsdruck > 1,5 bar', qTrue],
+      ['Ab einen Eingangsdruck > 1,5 bar', qFalse],
       ['Ab einem Eingangsdruck > 3 bar', qFalse],
       ['Ab einen Ausgangsdruck von ca. 3 bar', qTrue],
       ['bei automatisch gesteuerten Entlüftungseinrichtungen gibt es keinen festgelegten Abschaltpunkt', qFalse]
