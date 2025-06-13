@@ -16,10 +16,10 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # TODO: Also edit android/app/build.gradle
-version: 1.0.1+2
+version: 1.1.0+3
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=3.8.0"
 
 dependencies:
   flutter:
@@ -30,7 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.2
 
   # to handle SVGs for Android, iOS, and Web
-  flutter_svg: ^0.21.0+1
+  flutter_svg: ^2.1.0
 
   # state management, intelligent dependency injection, and route management
   get: ^4.1.4

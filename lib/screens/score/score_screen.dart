@@ -42,7 +42,7 @@ class ScoreScreen extends StatelessWidget {
                     "Ergebnis",
                     style: Theme.of(context)
                         .textTheme
-                        .headline4
+                        .headlineMedium
                         ?.copyWith(color: kSecondaryColor),
                   ),
                 ),
@@ -66,7 +66,7 @@ class ScoreScreen extends StatelessWidget {
                         "${_qnController.numOfCorrectAns} aus ${_qnController.numOfTotalAns} richtig.\n",
                         style: Theme.of(context)
                             .textTheme
-                            .headline4
+                            .headlineMedium
                             ?.copyWith(color: kBlackColor),
                         textAlign: TextAlign.center,
                       ),
@@ -76,7 +76,7 @@ class ScoreScreen extends StatelessWidget {
                                 ? "Bestanden"
                                 : "Durchgefallen") +
                             " mit ${_resultPercentage.toStringAsFixed(2)}%.",
-                        style: Theme.of(context).textTheme.headline4?.copyWith(
+                        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
                             color: _resultPercentage >= 75.0
                                 ? kGreenColor
                                 : kRedColor),
