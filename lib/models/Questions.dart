@@ -11,7 +11,8 @@ class Question {
 List<List> questionCatalogue = [
   squadQuestions,
   machinistQuestions,
-  groupLeaderQuestions
+  groupLeaderQuestions,
+  skillDrivingQuestions
 ];
 
 List squadQuestions = [
@@ -2747,6 +2748,506 @@ List groupLeaderQuestions = [
         'Gefahrengruppe III - Bereiche, in denen Einsatzkräfte nur mit Sonderausrüstung und unter besonderer Überwachung und Dekontamination/Hygiene tätig werden dürfen und deren Eigenart die Anwesenheit einer fachkundigen Person notwendig macht, die während des Einsatzes die entstehende Gefährdung und die anzuwendenden Schutzmaßnahmen beurteilen kann',
         qTrue
       ]
+    ],
+  }
+];
+// Fragenkatalog Geschicklichkeitsfahren fuer Maschinisten
+// https://www.lfs-bw.de/fileadmin/LFS-BW/themen/wettbewerb/dokumente/Uebungsfragen_Geschicklichkeitsfahren_2019_Loesungen.pdf
+
+List skillDrivingQuestions = [
+  {
+    "question":
+        'Welche Einschaltmöglichkeiten für die Feuerlöschkreiselpumpen kann es an Löschfahrzeugen geben?',
+    "options": [
+      ['Mechanisch', qTrue],
+      ['Pneumatisch ', qTrue],
+      ['Elektropneumatisch', qTrue],
+      ['Keine, da sie ständig vom Motor angetrieben wird', qFalse]
+    ],
+  },
+    {
+    "question":
+        'Welche Knoten, Schläge oder Stiche sind erforderlich beim Verlegen einer Saugleitung mit Ventil- und Halteleine?',
+    "options": [
+      ['Mastwurf', qTrue],
+      ['Zimmermannschlag ', qTrue],
+      ['Halbschlag', qTrue],
+      ['Doppelschlinge', qFalse],
+      ['Ankerstich', qFalse]
+    ],
+  },
+    {
+    "question":
+        'Die geodätische Saughöhe beträgt 1 m. Das Eingangsmanometer zeigt - 0,9 bar an. Trotz Vollgas bleibt die Anzeige am Ausgangsmanometer auf „Null“. Welche Ursachen können vorliegen?',
+    "options": [
+      ['Die Schutzvorrichtung (Sieb) ist mit Fremdkörpern verstopft', qTrue],
+      ['Rückschlagorgan des Saugkorbs defekt ', qTrue],
+      ['Es wird ein Gasstrahler als Entlüftungseinrichtung benutzt und der Antrieb der Feuerlöschkreiselpumpe ist nicht eingekuppelt', qTrue],
+      ['Die Innengummierung eines Saugschlauches hat sich gelöst und bildet einen Verschluss', qTrue],
+      ['Der Saugschutzkorb fehlt', qFalse]
+    ],
+  },
+    {
+    "question":
+        'Welche Bedeutung hat das Eingangsmanometer für den Maschinisten?',
+    "options": [
+      ['Es zeigt den Druck an der Feuerlöschkreiselpumpe während des Saugbetriebs an', qTrue],
+      ['Es zeigt bei der Wasserentnahme von einem Hydranten den Eingangsdruck an', qTrue],
+      ['Es zeigt während der Wasserförderung die geodätische Saughöhe an', qFalse],
+      ['Es ist zur Trockensaugprobe erforderlich', qTrue]
+    ],
+  },
+      {
+    "question":
+        'Welche Messinstrumente können vom Maschinisten an einer Tragkraftspritze TS 8/8 abgelesen werden?',
+    "options": [
+      ['Betriebsstundenzähler', qTrue],
+      ['Drehzahlmesser', qFalse],
+      ['Ausgangsdruckmanometer', qTrue],
+      ['Eingangsdruckmanometer', qTrue],
+      ['Durchflussmesser', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Bei einem Brandeinsatz entnehmen Sie aus einem Löschteich Wasser. Der Brand ist noch nicht unter Kontrolle. Plötzlich hören Sie in der Kreiselpumpe bisher unbekannte Geräusche, und der Eingangsdruck geht auf -1 bar. Wie verhalten Sie sich?',
+    "options": [
+      ['Sie gehen mit dem Ausgangsdruck etwas zurück', qTrue],
+      ['Sie informieren sofort den Einsatzleiter und betreiben die Pumpe zunächst weiter', qTrue],
+      ['Sie nehmen die Pumpe sofort außer Betrieb', qFalse],
+      ['Sie unternehmen gar nichts, da Sie den Vorwurf fürchten, Sie hätten den Schaden verursacht', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Zu welchem Zweck darf Blaues Blinklicht allein (ohne Einsatzhorn) verwendet werden?',
+    "options": [
+      ['Bei einem Brandeinsatz zwischen 22.00 Uhr und 6.00 Uhr', qFalse],
+      ['Bei Fahrten im geschlossenen Verband', qTrue],
+      ['Zur Warnung an Einsatzstellen', qTrue],
+      ['Beim Rückwärtsfahren', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Warum ist beim Schaumeinsatz ein höherer Ausgangsdruck an der Feuerlöschkreiselpumpe erforderlich?',
+    "options": [
+      ['Um die vorgesehene Wurfweite für das Schwerschaumrohr zu erreichen', qTrue],
+      ['Wegen dem Druckverlust im Zumischer', qTrue],
+      ['Eine Druckerhöhung ist nicht zulässig', qFalse]
+    ],
+  },
+  {
+    "question":
+        'In welchem Löschfahrzeug befindet sich eine Schnellangriffseinrichtung (Wasser)?',
+    "options": [
+      ['Tragkraftspritzenfahrzeug', qFalse],
+      ['Löschgruppenfahrzeug 10', qTrue],
+      ['Löschgruppenfahrzeug 20', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Auf was muss bei der Überprüfung der Verkehrssicherheit an einem Feuerwehrfahrzeug geachtet werden?',
+    "options": [
+      ['Beladung, Verriegelung der Gerätehalterungen', qTrue],
+      ['Bremsen', qTrue],
+      ['Bereifung, Lenkung', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Welches Verhalten soll ein Maschinist im Einsatz zeigen?',
+    "options": [
+      ['Vorsichtig fahren', qTrue],
+      ['Ruhe bewahren ', qTrue],
+      ['Den Einsatzleiter auf Unregelmäßigkeiten (z. B. in der Wasserversorgung) aufmerksam machen', qTrue],
+      ['Zur Eile drängen', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Welche Löschwasserentnahmestellen zählen zur abhängigen Löschwasserversorgung?',
+    "options": [
+      ['Unterflurhydrant', qTrue],
+      ['Löschwasserteich', qFalse],
+      ['Schachthydrant', qTrue],
+      ['Überflurhydrant', qTrue],
+      ['Löschwasserbehälter', qFalse],
+      ['Löschwasserbrunnen', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Bei einem Fahrzeug mit druckluftunterstützter hydraulischer Bremsanlage ist die Druckluftunterstützung ausgefallen. Kann mit der Betriebsbremse noch gebremst werden?',
+    "options": [
+      ['Die Betriebsbremse fällt ganz aus', qFalse],
+      ['Ja, denn die Vakuumpumpe des Dieselmotors ersetzt die Druckluftunterstützung', qFalse],
+      ['Auch bei unbeladenem Fahrzeug ist trotz großer Fußkraft nur eine geringe Bremswirkung zu erreichen', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Wozu dient das Ausgangsmanometer? ',
+    "options": [
+      ['Es zeigt den Ausgangsdruck an', qTrue],
+      ['Es lässt im Zusammenhang mit der Gasregulierung erkennen, ob noch mehr Rohre angeschlossen werden können', qTrue],
+      ['An ihm kann gleichzeitig die Drehzahl abgelesen werden', qFalse],
+      ['Es dient als Messinstrument bei der Schließdruckprüfung', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Die Wasserlieferung eines Hydranten ist abhängig von:',
+    "options": [
+      ['Durchmesser der Wasserleitung', qTrue],
+      ['dem Luftdruck', qFalse],
+      ['dem Wasserdruck', qTrue],
+      ['Art des Rohrnetzes (Ring- oder Stichleitung)', qTrue],
+      ['Länge der Schlauchleitung zur Feuerlöschkreiselpumpe', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Was ist beim Einsatz der elektrischen Tauchpumpe zu beachten?',
+    "options": [
+      ['Wird die Tauchpumpe ausnahmsweise an einem Hausanschluss betrieben, ist unbedingt ein Personenschutzschalter (PRCD) zu verwenden', qTrue],
+      ['Die Pumpe ist mit einer Mehrzweckleine zu sichern', qTrue],
+      ['Elektrische Verbraucher sollen grundsätzlich durch den Stromerzeuger der Feuerwehr betrieben werden', qTrue],
+      ['Das äußere Schutzsieb darf auf keinen Fall abgeschraubt werden', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Welche Aufgabe hat der Maschinist beim Steckleitereinsatz?',
+    "options": [
+      ['Er bestimmt die Anzahl der benötigten Leiterteile', qFalse],
+      ['Die Steckleiter wir grundsätzlich komplett heruntergegeben', qTrue],
+      ['Es werden nur die tatsächlich benötigten Leiterteile heruntergegeben', qFalse],
+      ['Er hilft dem Trupp bei der Vornahme der Leiter ', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Gegenüber welchen Verkehrsteilnehmern müssen Sie sich besonders vorsichtig verhalten?',
+    "options": [
+      ['Gegenüber Kinder', qTrue],
+      ['Gegenüber Taxifahrern', qFalse],
+      ['Gegenüber Personen mit erkennbarer Behinderung', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Es fängt an zu regnen. Warum müssen Sie den Sicherheitsabstand sofort vergrößern?',
+    "options": [
+      ['Weil die Sicht schlechter werden kann und die Scheibenwischer nicht sofort ein klares Sichtfeld schaffen', qTrue],
+      ['Weil die Bremsen schneller ansprechen', qFalse],
+      ['Weil sich ein Schmierfilm bilden kann, der den Bremsweg verlängert', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Welche Eintragungen sollen unbedingt in das Fahrtenbuch?',
+    "options": [
+      ['Datum', qTrue],
+      ['Zeit (Beginn und Ende der Fahrt) und Kilometerstand', qTrue],
+      ['Name des Fahrers', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Welche Voraussetzungen müssen gegeben sein, dass Fahrer von Löschfahrzeugen auch gefährliche Situationen beherrschen?',
+    "options": [
+      ['Führerschein entsprechend der Fahrzeugklasse', qTrue],
+      ['Guter Gesundheitszustand und körperliche Leistungsfähigkeit', qTrue],
+      ['Regelmäßige Übungsfahrten', qTrue],
+      ['Führerscheinklasse spielt bei Einsatzfahrt keine Rolle', qFalse]  
+    ],
+  },
+  {
+    "question":
+        'Welche Feuerwehrpumpen dürfen zum Fördern von Heizöl verwendet werden?',
+    "options": [
+      ['Gefahrumfüllpumpe GUP 3-1,5', qTrue],
+      ['Feuerlöschkreiselpumpe FPN 10/1000', qFalse],
+      ['Druckluftmembranpumpe', qTrue],
+      ['Umfüllpumpe TUP 3-1,5', qTrue],
+      ['Lenz-Kreiselpumpe 24/3', qFalse], 
+      ['Tragbare Tauchpumpe mit Elektromotor TP 4/1', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Welche Einflüsse führen dazu, dass die theoretische Saughöhe von 10,33 m nicht erreicht werden kann?',
+    "options": [
+      ['Luftdruck 900 mbar', qTrue],
+      ['Strömungsverluste', qTrue],
+      ['Reibungsverluste', qTrue],
+      ['Entlüftungseinrichtungen erzeugen kein 100%iges Vakuum', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Was geschieht in der Feuerlöschkreiselpumpe, wenn der Spaltring beschädigt ist?',
+    "options": [
+      ['In der Pumpe entsteht ein Wasserkreislauf von der Druckseite zur Saugseite', qTrue],
+      ['Durch den Wasserkreislauf in der Pumpe wird der Schließdruck kleiner', qTrue],
+      ['In der Pumpe entsteht ein Wasserkreislauf von der Saugseite zur Druckseite', qFalse],
+      ['Durch im Wasser mitgeführten Sand wird die Spaltweite immer größer', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Welchen Ausgangsdruck fährt der Maschinist ohne besondere Anweisung?',
+    "options": [
+      ['Beim Einsatz von Mehrzweckstrahlrohren: 5 bar', qTrue],
+      ['Beim Einsatz von Mehrzweckstrahlrohren: 8 bar ', qFalse],
+      ['Bei Schaumbetrieb: 10 bar', qTrue],
+      ['Bei Wasserförderung über lange Förderstrecken: 8 bar', qTrue],
+      ['Bei Wasserförderung über lange Förderstrecken: 10 bar', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Wann wird die automatisch gesteuerte Entlüftungseinrichtung einer Kreiselpumpe ausgeschaltet?',
+    "options": [
+      ['Ab einen Eingangsdruck > 1,5 bar', qFalse],
+      ['Ab einem Eingangsdruck > 3 bar', qFalse],
+      ['Ab einen Ausgangsdruck von ca. 3 bar', qTrue],
+      ['bei automatisch gesteuerten Entlüftungseinrichtungen gibt es keinen festgelegten Abschaltpunkt', qFalse]
+    ],
+  },
+  {
+    "question":
+        'In § 38 der StVO wird die Verwendung von blauem und gelbem Blinklicht angesprochen. Welche Aussage ist richtig? Blaues Blinklicht zusammen mit dem Einsatzhorn darf nur verwendet werden, wenn...',
+    "options": [
+      ['höchste Eile geboten ist ', qTrue],
+      ['Verkehrssicherungsmaßnahmen erforderlich sind', qFalse],
+      ['schwere gesundheitliche Schäden an Menschen abzuwenden sind', qTrue],
+      ['bedeutende Sachwerte zu erhalten sind', qTrue],
+      ['Krankentransporte durchzuführen sind', qFalse],
+      ['Feuersicherheitswachen erforderlich sind.', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Welche Aussage ist richtig?',
+    "options": [
+      ['Eine Erwärmung des Wassers in der Pumpe ist zu vermeiden', qTrue],
+      ['Bei Temperaturen unter null ist immer für einen kleinen Wasserdurchfloss zu sorgen', qTrue],
+      ['Die Ventilleine (und gegebenenfalls die Halteleine) wird mit einem Mastwurf befestigt', qTrue],
+      ['Im Lenzbetrieb muss das ständige Mitlaufen der Entlüftungseinrichtung vermieden werden', qTrue],
+      ['Die Ventilleine wird erst gezogen, wenn die Pumpe stillsteht', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Welche der aufgeführten Armaturen legt der Maschinist bereit beziehungsweise schließt er an?',
+    "options": [
+      ['Sammelstück', qTrue],
+      ['Saugkorb', qTrue],
+      ['Standrohr', qFalse],
+      ['Verteiler', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Wie durchfahren Sie enge Kurven?',
+    "options": [
+      ['Vor der Kurve Geschwindigkeit vermindern', qTrue],
+      ['Erst beim Übergang in die Gerade wieder beschleunigen', qTrue],
+      ['Erst am Scheitelpunkt der Kurve Geschwindigkeit vermindern', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Welche Angaben befinden sich auf dem Kennzeichnungsschild vom Hydrant?',
+    "options": [
+      ['Nennweite der Wasserrohrleitung', qTrue],
+      ['Standort des Hydranten', qTrue],
+      ['Hinweis ob Unter- oder Überflurhydrant', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Ein Hohlstrahlrohr mit Betriebsdruck 8 bar soll vom Maschinisten mit Wasser versorgt werden. Was ist zu beachten?',
+    "options": [
+      ['Solch ein spezielles Strahlrohr kann nur über den Schnellangriff benutzt werden', qFalse],
+      ['Es ist mit erhöhtem Ausgangsdruck zu fahren', qTrue],
+      ['Der Förderstrom kann höher sein als bei einem herkömmlichen Mehrzweckstrahlrohr', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Was ist die Ursache, dass beim Saugvorgang Wasser in die Pumpe strömt?',
+    "options": [
+      ['Die Pumpe saugt das Wasser automatisch an', qFalse],
+      ['Die Entlüftungseinrichtung saugt das Wasser an', qFalse],
+      ['die Entlüftungseinrichtung sorgt für einen negativen Druck in der Pumpe und der atmosphärische Luftdruck drückt das Wasser in die Pumpe', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Wie kann sich der Maschinist helfen, wenn die Entlüftungseinrichtung der Feuerlöschkreiselpumpe ausgefallen ist? ',
+    "options": [
+      ['Bei Löschfahrzeugen mit Löschwasserbehälter die Feuerlöschkreiselpumpe und Saugleitung aus dem Löschwasserbehälter füllen', qTrue],
+      ['Gruppenführer benachrichtigen, damit Ersatzpumpe nachgefordert wird', qTrue],
+      ['Feuerlöschkreiselpumpe und Saugleitung von Hand auffüllen', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Welche Möglichkeiten gibt es, der Einfriergefahr entgegenzuwirken, wenn eine Feuerlöschkreiselpumpe im Winter an der Einsatzstelle abgestellt wird?',
+    "options": [
+      ['Pumpengehäuse mit Frostschutzmittel durchspülen', qTrue],
+      ['Pumpengehäuse restlos entwässern', qTrue],
+      ['Blindkupplung am Saugeingang schließen und Pumpe ganz voll mit Wasser füllen', qFalse],
+      ['Dichtlippen der Blindkupplungen mit Graphit oder Talkum einreiben', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Bei welchen Wasserentnahmestellen muss angesaugt werden?',
+    "options": [
+      ['Löschteich', qTrue],
+      ['Überflurhydranten', qFalse],
+      ['Unterirdischer Löschwasserbehälter', qTrue],
+      ['Bach', qTrue],
+      ['Unterflurhydrant', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Was haben Sie als Maschinist zu beachten, wenn Sie das Fahrzeug im Feuerwehrhaus abstellen? ',
+    "options": [
+      ['Fahrzeug an Versorgungsleitungen anschließen ', qTrue],
+      ['Fahrtenbuch ausfüllen', qTrue],
+      ['Alle Rollläden öffnen ', qFalse],
+      ['Zündschlüssel in Schlüsselkasten deponieren', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Bei einem Kraftfahrzeug mit Druckluftbremse bricht während der Fahrt eine Leitung am Vorratsbehälter des Bremskreises der Vorderachse. Wie können Sie den Schaden erkennen?',
+    "options": [
+      ['Am Doppeldruckmesser des Bremskreises der Vorderachse oder an der Warneinrichtung', qTrue],
+      ['Am Ansprechen der Federspeicherbremse', qFalse],
+      ['An der geringeren Bremswirkung', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Welche Entfernungen sind beim Einsatz von tragbaren Stromerzeugern, genormten Feuerwehrkabeltrommeln und Verbraucher (z. B. Flutlichtscheinwerfer) zulässig?',
+    "options": [
+      ['Zwischen Stromerzeuger und Verbrauchern liegen 100 m Leitungslänge (Anschlussleitung - max. 10 m - bleibt unberücksichtigt)', qTrue],
+      ['Zwischen zwei Verbrauchern liegen nicht mehr als 100 m Leitungslänge', qTrue],
+      ['Zwischen zwei Verbrauchern liegen bis zu 200 m Leitungslänge', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Was bedeutet die Bezeichnung PFPN 10-1000?',
+    "options": [
+      ['PFPN 10-1000 ist keine gültige Normbezeichnung für Feuerwehrpumpen', qFalse],
+      ['Ist die Bezeichnung einer Feuerlöschkreiselpumpe mit einem Nennförderdruck von 10 bar bei einem Nennförderstrom von 1000 l/min', qFalse],
+      ['Ist die Bezeichnung einer tragbaren Feuerlöschkreiselpumpe mit einem Nennförderdruck von 10 bar bei einem Nennförderstrom von 1000l/min', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Durch welche Verhaltensweise des Maschinisten kann das Fahrverhalten von Feuerwehrfahrzeugen beeinflusst werden?',
+    "options": [
+      ['Situationsangepasste Geschwindigkeit ', qTrue],
+      ['Vorausschauendes Fahren', qTrue],
+      ['Dosiertes Bremsen', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Wodurch wird die Größe der Fliehkraft in Kurven beeinflusst?',
+    "options": [
+      ['Durch den Kurvenradius', qTrue],
+      ['Durch den Fahrtwind', qFalse],
+      ['Durch die Geschwindigkeit', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Wo führt schnelles Fahren häufig zu Unfällen?',
+    "options": [
+      ['An Fußgängerüberwegen', qTrue],
+      ['An Straßenkreuzungen und -einmündungen', qTrue],
+      ['In Kurven', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Warum müssen Sie bei Nässe einen erheblich größeren Sicherheitsabstand einhalten als bei trockener Fahrbahn?',
+    "options": [
+      ['Weil der Bremsweg länger wird', qTrue],
+      ['Weil durch Spritzwasser die Sicht beeinträchtigt werden kann', qTrue],
+      ['Weil sich der Kontakt zwischen Reifen und Fahrbahn verschlechtert', qTrue],
+      ['Einsatzfahrzeuge haben leistungsfähigere Bremsen, ein erhöhter Sicherheitsabstand ist auch bei Nässe nicht notwendig ', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Welche Aussagen zum Begriff „Toter Winkel“ sind richtig? Der „Tote Winkel“ ist ein Bereich um das Fahrzeug, der...',
+    "options": [
+      ['besonders für Radfahrer gefährlich ist', qTrue],
+      ['aufgrund des Wendekreises nicht befahrbar ist', qFalse],
+      ['auch mittels Spiegel nicht einsehbar ist', qTrue],
+      ['für den Fahrer von Einsatzfahrzeugen vernachlässigbar ist', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Wer entscheidet über die Inanspruchnahme der Sonder- und Wegerechte? ',
+    "options": [
+      ['Die Leitstelle', qFalse],
+      ['Der Maschinist', qFalse],
+      ['Der Kreisbrandmeister', qFalse],
+      ['Der Einheitsführer', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Was zeigt der Eingangsdruckmanometer einer FPN, bei der Wasserentnahme offenes Gewässer an?',
+    "options": [
+      ['er steht genau auf 0 bar', qFalse],
+      ['er befindet im schwarzen Bereich der Anzeige (positiver Druckbereich)', qFalse],
+      ['er befindet sich im roten Bereich der Anzeige', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Was sind nach der FwDV 3 die Aufgaben eines Maschinisten bei einen Brandeinsatz?',
+    "options": [
+      ['sichern der Einsatzstelle mit Warnblinkanlage, Fahrlicht und blauen Blinklicht', qTrue],
+      ['er bedient die FPN und dier eingebauten Aggregate', qTrue],
+      ['er unterstützt bei der Entnahme der Geräte', qTrue],
+      ['er unterstützt beim Aufbau der Wasserversorgung', qTrue],
+      ['auf Befehl unterstützt er die Atemschutzüberwachung', qTrue]
+    ],
+  },
+  {
+    "question":
+        'Wie entsteht der Druck in einer Feuerlöschkreiselpumpe',
+    "options": [
+      ['der Luftdruck wird in Wasserdruck umgewandelt', qFalse],
+      ['durch die Reibung in der Pumpe und in den Schläuchen', qFalse],
+      ['durch Fliehkräfte und der Umwandlung von Geschwindigkeitsenergie in Druckenergie ', qTrue],
+      ['die Motorleistung wird direkt in Druckenergie umgewandelt', qFalse]
+    ],
+  },
+  {
+    "question":
+        'Was sind Maßnahmen zur Vermeidung von Kavitation?',
+    "options": [
+      ['auf eine möglichst geringe Saughöhe achten', qTrue],
+      ['bei Anzeichen von Kavitation sofort die Drehzahl erhöhen', qFalse],
+      ['die Wasserabgabe sollte im Verhältnis zur Wasserzufuhr stehen', qTrue],
+      ['der Förderstrom kann immer bis zum Nennförderstrom erhöht werden, erst dann ist mit Kavitation zu rechnen', qFalse]
     ],
   }
 ];
