@@ -16,7 +16,7 @@ publish_to: "none" # Remove this line if you wish to publish to pub.dev
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
 # TODO: Also edit android/app/build.gradle
-version: 1.1.0+3
+version: 2.0.0+4
 
 environment:
   sdk: ">=3.8.0"
